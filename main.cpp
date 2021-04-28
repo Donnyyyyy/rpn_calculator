@@ -85,6 +85,10 @@ int main() {
     std::cout << "Инфиксная запись: " << *root_node->unparse_infix() << std::endl;
     std::cout << "Результат: " << root_node->get_value() << std::endl;
 
+    for(auto token: *tokens) {
+        delete token;
+    }
+    delete tokens;
     delete lexer;
     delete parser;
     delete root_node;

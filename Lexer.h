@@ -42,7 +42,7 @@ public:
     std::vector<Token *> *tokenize(const std::string &expression);
 
 protected:
-    [[nodiscard]] Token *get_next_token(std::string &expression) const;
+    Token *get_next_token(std::string &expression) const;
 
     static void skip_spaces(std::string &expression);
 };
